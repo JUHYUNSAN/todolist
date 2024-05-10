@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { TodoItem } from "../todoItem/todoItem";
 
-export const List = ({todos}) => {
+export const List = ({todos, onUpdate, onDelete}) => {
 
   const [search, setSearch] = useState("");
   
@@ -16,7 +16,9 @@ export const List = ({todos}) => {
     if(search === ""){
       return todos;
     }
-    return todos.filter((todo)=>todo.content.includes(search))
+    return todos.filter((todo)=>
+      todo.content.toLowerCase().includes(search.toLowerCase())
+  );
   };
 
   const filteredTodos = getFilteredData();
@@ -25,8 +27,12 @@ export const List = ({todos}) => {
     <StyledListContainer>
       <p>to do list</p>
       <InputSearch value={search} onChange={onChangeSearch} placeholder="please write what you want to find"></InputSearch>
-      {todos.map((todo)=>{
-        return <TodoItem key={todo.id} {...todo} />;
+      {filteredTodos.map((todo)=>{
+        return <TodoItem 
+          key={todo.id} 
+          {...todo} 
+          onUpdate={onUpdate}
+          onDelete={onDelete} />;
       })}
     </StyledListContainer>
   );

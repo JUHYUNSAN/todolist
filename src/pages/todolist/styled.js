@@ -6,7 +6,6 @@ export const TodolistContainer = styled.div`
   gap: 10px;
   justify-content:center;
   align-items:center;
-  height:300px;
   font-size:30px;
   margin: 0 auto;
 `;
