@@ -8,4 +8,5 @@ export const TodolistContainer = styled.div`
   align-items:center;
   height:300px;
   font-size:30px;
+  margin: 0 auto;
 `;
