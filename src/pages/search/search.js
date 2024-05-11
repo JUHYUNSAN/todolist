@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
+import { Weather } from "../../components/weather/weather";
 
 export const Search = () => {
-
-    return <div>search</div>
+    
+    return (
+        <Weather />
+    );
 };
