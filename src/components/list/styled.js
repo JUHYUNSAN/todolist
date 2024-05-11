@@ -11,4 +11,5 @@ export const InputSearch = styled.input`
   width: 100%;
   border: none;
   padding: 15px 0px;
+  border-bottom: 1px solid rgb(220,220,220);
 `;

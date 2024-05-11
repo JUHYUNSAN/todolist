@@ -34,6 +34,7 @@ export const List = ({todos, onUpdate, onDelete}) => {
           onUpdate={onUpdate}
           onDelete={onDelete} />;
       })}
+      <hr></hr>
     </StyledListContainer>
   );
 };
