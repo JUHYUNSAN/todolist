@@ -25,7 +25,7 @@ export const List = ({todos, onUpdate, onDelete}) => {
 
   return (
     <StyledListContainer>
-      <p>to do list</p>
+      <p>to do list🌱</p>
       <InputSearch value={search} onChange={onChangeSearch} placeholder="please write what you want to find"></InputSearch>
       {filteredTodos.map((todo)=>{
         return <TodoItem 

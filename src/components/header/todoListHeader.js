@@ -7,7 +7,7 @@ export const TodoListHeader = () => {
   const fullDate = currentDate.toLocaleDateString('en-US', options);
 
   return <div>
-    <p> today is..</p>
+    <p> today is🗓️</p>
     <h3> {fullDate} </h3>
   </div>;
 };
