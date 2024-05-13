@@ -16,13 +16,15 @@ export const MainDirection = styled.div`
   direction: row;
   align-items:center;
   gap: 20px;
-  margin: 0 auto;
+  margin: 6rem 
 `;
 
 export const MainIntro = styled.div`
   display: flex;
+  flex-direction: column;
   font-size:30px;
   margin: 0 auto;
+  color: grey;
 `;
 
 

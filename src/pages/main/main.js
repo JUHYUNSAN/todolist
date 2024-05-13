@@ -9,7 +9,16 @@ export const Main = () => {
 
     return (
     <MainContainer>
-        <MainIntro>Hello</MainIntro>
+        <MainIntro>
+            <h2>Hello, </h2> <br />
+            <p>
+                This is Diary Main page <br />
+                If you want to go other page, <br />
+                please click below box which you want to go 
+
+            </p>
+
+        </MainIntro>
 
         <MainDirection>
             <MainContainerBox 
