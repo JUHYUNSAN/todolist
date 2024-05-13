@@ -6,7 +6,7 @@ import { TodoListHeader } from "../../components/header/todoListHeader";
 import { Editor } from "../../components/editor/editor";
 import { List } from "../../components/list/list";
 
-const mockData = [
+const mockData = [ //투두아이템 배열(임시데이터)로 만듬
     {
         id:0,
         isDone: false,
@@ -29,18 +29,18 @@ const mockData = [
 
 export const Todolist = () => {
     
-    const [todos, setTodos] = useState(mockData);
-    const idRef = useRef(3)
+    const [todos, setTodos] = useState(mockData);　//새로운 status에 임시데이터 넣어서 초기화
+    const idRef = useRef(3) //mockdata와 겹치지않기 위해
     
-    const onCreate = (content) => {
+    const onCreate = (content) => { //추가하기 기능 content매개변수로 받음
         const newTodo = {
-            id : idRef.current++,
+            id : idRef.current++, //매번 idRef 추가 
             isDone: false,
             content: content,
-            date: new Date().getTime()
+            date: new Date().getTime() //현재날짜
         }
 
-        setTodos([newTodo, ...todos])
+        setTodos([newTodo, ...todos]) //setTodos호출해서 인수로 넣어야함
 
     };
 
@@ -61,7 +61,7 @@ export const Todolist = () => {
     return (
           <TodolistContainer>
               <TodoListHeader />
-              <Editor onCreate={onCreate} />
+              <Editor onCreate={onCreate} /> {/* 에디터컴포넌트에 전달 */}
               <List 
                 todos={todos} 
                 onUpdate={onUpdate} 

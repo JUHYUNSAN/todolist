@@ -18,7 +18,7 @@ export const Main = () => {
         </MainContainerBox>
         
         <MainContainerBox 
-            onClick={() => navigate("/search")}> SEARCH
+            onClick={() => navigate("/search")}> WEATHER
         </MainContainerBox>
     </MainContainer>
     );

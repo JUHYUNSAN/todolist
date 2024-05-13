@@ -9,9 +9,10 @@ export const Header = () => {
 
   return (
     <HeaderContainer>
-      <HeaderBtn onClick={() => navigate1("/main")}> MAIN</HeaderBtn>
+      <h1>DIARY</h1>
+      <HeaderBtn onClick={() => navigate1("/main")}> HOME</HeaderBtn>
       <HeaderBtn onClick={() => navigate1("/todolist")}> TO DO LIST</HeaderBtn>
-      <HeaderBtn onClick={() => navigate1("/search")}> SEARCH</HeaderBtn>
+      <HeaderBtn onClick={() => navigate1("/search")}> WEATHER</HeaderBtn>
     </HeaderContainer>
 );
 };
