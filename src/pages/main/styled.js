@@ -10,11 +10,28 @@ export const MainContainer = styled.div`
   margin: 0 auto;
 `;
 
+
+export const MainDirection = styled.div`
+  display: flex;
+  direction: row;
+  align-items:center;
+  gap: 20px;
+  margin: 0 auto;
+`;
+
+export const MainIntro = styled.div`
+  display: flex;
+  font-size:30px;
+  margin: 0 auto;
+`;
+
+
 export const MainContainerBox = styled.button`
   display: flex;
   padding: 20px;
   gap: 20px;
   justify-content:center;
   align-items:center;
-  background-color: grey;
+  background-color: white;
+  cursor: pointer;
 `;

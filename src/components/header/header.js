@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderContainer, HeaderBtn } from "./styled";
+import { HeaderContainer, HeaderBtn, TitleContainer, HeaderNav } from "./styled";
 
 import { useNavigate } from "react-router-dom";
 
@@ -9,10 +9,13 @@ export const Header = () => {
 
   return (
     <HeaderContainer>
-      <h1>DIARY</h1>
-      <HeaderBtn onClick={() => navigate1("/main")}> HOME</HeaderBtn>
-      <HeaderBtn onClick={() => navigate1("/todolist")}> TO DO LIST</HeaderBtn>
-      <HeaderBtn onClick={() => navigate1("/search")}> WEATHER</HeaderBtn>
+      <TitleContainer><h1>DIARY</h1></TitleContainer>
+      
+      <HeaderNav>
+        <HeaderBtn onClick={() => navigate1("/main")}> HOME</HeaderBtn>
+        <HeaderBtn onClick={() => navigate1("/todolist")}> TO DO LIST</HeaderBtn>
+        <HeaderBtn onClick={() => navigate1("/search")}> WEATHER</HeaderBtn>
+      </HeaderNav>
     </HeaderContainer>
 );
 };

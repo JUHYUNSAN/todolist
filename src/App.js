@@ -14,6 +14,7 @@ import { Todolist } from "./pages/todolist/todolist";
 
 //components
 import { Header } from "./components/header/header";
+import { Footer } from "./components/footer/footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/search" element={<Search />} />
         <Route exact path="/todolist" element={<Todolist />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
