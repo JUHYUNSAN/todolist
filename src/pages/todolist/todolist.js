@@ -1,5 +1,5 @@
 import React from "react";
-import {useState, useRef} from 'react';
+import {useState, useRef, useEffect} from 'react';
 
 import { TodolistContainer } from "./styled";
 import { TodoListHeader } from "../../components/header/todoListHeader";
@@ -29,9 +29,16 @@ const mockData = [ //투두아이템 배열(임시데이터)로 만듬
 
 export const Todolist = () => {
     
-    const [todos, setTodos] = useState(mockData);　//새로운 status에 임시데이터 넣어서 초기화
+    const [todos, setTodos] = useState(() => {
+        const storedTodos = localStorage.getItem("todos");
+        return storedTodos ? JSON.parse(storedTodos) : mockData;
+      });　//새로운 status에 임시데이터 넣어서 초기화
     const idRef = useRef(3) //mockdata와 겹치지않기 위해
     
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+      }, [todos]);
+
     const onCreate = (content) => { //추가하기 기능 content매개변수로 받음
         const newTodo = {
             id : idRef.current++, //매번 idRef 추가 

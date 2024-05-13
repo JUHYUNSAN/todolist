@@ -13,7 +13,7 @@ export const Editor = ({ onCreate }) => { //투두리스트에 있는 추가기�
   }; 
 
   const onKeydown = (e)=>{ //엔터키눌러도 에드되게
-    if(e.keyCode === 13) {
+    if(e.keyCode === 13) { //엔터키 코드가 13 그래서 엔터를 눌러도 서밋 기능이 실행되게 하는 코드
       onSubmit(); 
     }
   }
@@ -32,7 +32,7 @@ export const Editor = ({ onCreate }) => { //투두리스트에 있는 추가기�
       <InputList 
         ref={contentRef}
         value={content} 
-        onKeyDown={onKeydown}
+        onKeyDown={onKeydown} //사용자가 키보드를 누를때 발생되는 이벤트ㅁ
         onChange={onChangeContent} 
         placeholder="please add what to do"></InputList>
       <AddButton onClick={onSubmit}>ADD</AddButton>
