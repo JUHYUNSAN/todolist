@@ -41,3 +41,8 @@ export const TodoListHeaderContainerTitle = styled.div`
   margin: 10px;
   color: lightslategray;
 `;
+
+export const TodoListHeaderContainerDate = styled.h3`
+  margin: 10px;
+  color: darkgray;
+`;

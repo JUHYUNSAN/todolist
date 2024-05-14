@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoListHeaderContainer,TodoListHeaderContainerTitle } from "./styled";
+import { TodoListHeaderContainer,TodoListHeaderContainerTitle, TodoListHeaderContainerDate } from "./styled";
 
 export const TodoListHeader = () => {
   //full date 
@@ -10,7 +10,7 @@ export const TodoListHeader = () => {
   return (
     <TodoListHeaderContainer>
     <TodoListHeaderContainerTitle> Today is..🗓️</TodoListHeaderContainerTitle>
-    <h3> {fullDate} </h3>
+    <TodoListHeaderContainerDate> {fullDate} </TodoListHeaderContainerDate>
     </TodoListHeaderContainer>
   );
 };
