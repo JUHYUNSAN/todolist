@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import {WeatherContainer, WeatherItem, WeatherData, WeatherCity, WeatherCityBtn} from "./styled";
+import {WeatherContainer, WeatherItem, WeatherHeading, WeatherData, WeatherCity, WeatherCityBtn} from "./styled";
 
 export const Weather = () => {
     let cityList = ['Seoul','Tokyo','Osaka'];
@@ -50,7 +50,7 @@ export const Weather = () => {
     return (
         <WeatherContainer>
             <WeatherItem>
-                <h1>Today's weather🌎</h1>
+                <WeatherHeading>Today's weather🌎</WeatherHeading>
                 <WeatherData>
                     <img src={icon} width='100px' />
                     <h1>{temp}°C</h1>

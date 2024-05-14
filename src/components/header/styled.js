@@ -30,3 +30,14 @@ export const HeaderBtn = styled.button`
   cursor: pointer;
   background-color: white;
 `;
+
+export const TodoListHeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const TodoListHeaderContainerTitle = styled.div`
+  font-size: x-large;
+  margin: 10px;
+  color: lightslategray;
+`;

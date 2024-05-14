@@ -18,10 +18,12 @@ export const TodoItemList = styled.input`
 
 export const TodoItemCheckBox = styled.input`
   display: flex;
+  margin-right: 8px;
 `;
 
 export const TodoItemInput = styled.div`
   display: flex;
+  margin: 0;
 `;
 
 export const TodoItemBtn = styled.button`
@@ -35,4 +37,11 @@ export const TodoItemBtn = styled.button`
 export const TodoItemDate = styled.div`
   font-size: small;
   color: grey;
+`;
+
+export const FloatLeft = styled.div`
+  display: flex;
+  float: left;
+  width: 16rem;
+  font-size: smaller;
 `;

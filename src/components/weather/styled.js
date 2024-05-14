@@ -12,10 +12,15 @@ export const WeatherItem = styled.div`
   flex-direction: column;
   align-items: center;
 `
+export const WeatherHeading = styled.h1`
+  color: thistle;
+`
+
 export const WeatherData = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: blueviolet;
 `
 export const WeatherCity = styled.div`
   display: flex;
@@ -28,9 +33,9 @@ export const WeatherCity = styled.div`
 export const WeatherCityBtn = styled.button`
   display: flex;
   height: 1.5rem;
-  background-color: aliceblue;
+  background-color: plum;
   border: none;
-  color: slateblue;
+  color: azure;
   font-size: larger;
   cursor: pointer;
 `

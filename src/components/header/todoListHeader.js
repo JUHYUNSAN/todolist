@@ -1,4 +1,5 @@
 import React from "react";
+import { TodoListHeaderContainer,TodoListHeaderContainerTitle } from "./styled";
 
 export const TodoListHeader = () => {
   //full date 
@@ -6,8 +7,10 @@ export const TodoListHeader = () => {
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   const fullDate = currentDate.toLocaleDateString('en-US', options);
 
-  return <div>
-    <p> today is🗓️</p>
+  return (
+    <TodoListHeaderContainer>
+    <TodoListHeaderContainerTitle> Today is..🗓️</TodoListHeaderContainerTitle>
     <h3> {fullDate} </h3>
-  </div>;
+    </TodoListHeaderContainer>
+  );
 };
