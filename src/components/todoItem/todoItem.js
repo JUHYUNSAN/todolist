@@ -3,6 +3,8 @@ import { StyledTodoItemContainer,
   TodoItemList,
   TodoItemBtn,
   TodoItemInput,
+  TodoItemCheckBox,
+  TodoItemDate
    } from "./styled";
 
 export const TodoItem = ({id, isDone, content, date, onUpdate, onDelete}) => {
@@ -16,13 +18,13 @@ export const TodoItem = ({id, isDone, content, date, onUpdate, onDelete}) => {
   
   return (
     <StyledTodoItemContainer>
-      <input
+      <TodoItemCheckBox
         onChange={onChangeCheckbox} 
         readOnly 
         checked={isDone} 
         type="checkbox"/>
-      <TodoItemInput>{content}</TodoItemInput>
-      {new Date(date).toLocaleDateString()}
+      <TodoItemInput >{content}</TodoItemInput>
+      <TodoItemDate>{new Date(date).toLocaleDateString()}</TodoItemDate>
       <TodoItemBtn onClick={onClickDeletebutton}>cancle</TodoItemBtn>
     </StyledTodoItemContainer>
   );
