@@ -29,14 +29,16 @@ const mockData = [ //투두아이템 배열(임시데이터)로 만듬
 
 export const Todolist = () => {
     
+    const lastId = localStorage.getItem("lastId"); // 로컬 스토리지에서 마지막 할 일 항목의 id 값을 가져옴
     const [todos, setTodos] = useState(() => {
         const storedTodos = localStorage.getItem("todos");
         return storedTodos ? JSON.parse(storedTodos) : mockData;
-      });　//새로운 status에 임시데이터 넣어서 초기화
-    const idRef = useRef(3) //mockdata와 겹치지않기 위해
+      });　
+    const idRef = useRef(lastId ? parseInt(lastId) + 1 : 3); // 로컬 스토리지에 저장된 id 값이 있으면 그 값을 사용하고 없으면 기본 값인 3으로 설정
     
     useEffect(() => {
         localStorage.setItem("todos", JSON.stringify(todos));
+        localStorage.setItem("lastId", idRef.current);
       }, [todos]);
 
     const onCreate = (content) => { //추가하기 기능 content매개변수로 받음

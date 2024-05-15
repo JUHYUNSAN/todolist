@@ -38,7 +38,10 @@ export const Weather = () => {
             } else {
                 setCloud("sunny")
             }
-            })
+        })
+        .catch((e) => {
+            console.log(e);
+        })
     }
 
     useEffect(()=>{
@@ -58,7 +61,7 @@ export const Weather = () => {
                     <h4>{cloud}</h4>
                 </WeatherData>
                 <WeatherCity>
-                {cityList.map(item => <WeatherCityBtn onClick={getCity}>{item}</WeatherCityBtn>)}
+                {cityList.map((item, index) => <WeatherCityBtn key={index} onClick={getCity}>{item}</WeatherCityBtn>)}
                 {/* cityList.map() -> cityList 배열에 있는 각 도시 이름을 순회하면서 버튼을 생성
                  */}
                 </WeatherCity>
