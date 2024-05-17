@@ -33,7 +33,7 @@ export const Editor = ({ onCreate }) => { //투두리스트에 있는 추가기�
         ref={contentRef}
         value={content} 
         onKeyDown={onKeydown} //사용자가 키보드를 누를때 발생되는 이벤트ㅁ
-        onChange={onChangeContent} 
+        onChange={onChangeContent} //무언가 변경될때 발생되는 이벤트ㅁ
         placeholder="please add what to do"></InputList>
       <AddButton onClick={onSubmit}>ADD</AddButton>
     </StyledEditorContainer>

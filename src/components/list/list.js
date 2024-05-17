@@ -5,7 +5,7 @@ import { useState } from "react";
 import { TodoItem } from "../todoItem/todoItem";
 
 export const List = ({todos, onUpdate, onDelete}) => {
-//props로 투두리스트레 있는 todos, onUpdate, onDelete 받아옴
+//props로 부모속성에 있는 투두리스트에 있는 todos, onUpdate, onDelete 받아옴
   
   const [search, setSearch] = useState("");
   
@@ -14,7 +14,7 @@ export const List = ({todos, onUpdate, onDelete}) => {
   };
 
   const getFilteredData = () =>{
-    if(search === ""){ 
+    if(search === ""){ //이거는 아무것도 안적혀있으면 투두스 해라
       return todos;
     }
     return todos.filter((todo)=>
@@ -28,7 +28,7 @@ export const List = ({todos, onUpdate, onDelete}) => {
     <StyledListContainer>
       <p>To do list🌱</p>
       <InputSearch value={search} onChange={onChangeSearch} placeholder="please write what you want to find"></InputSearch>
-      {filteredTodos.map((todo)=>{ //투두를 새로운 배열로 반환함
+      {filteredTodos.map((todo)=>{ //투두를 새로운 배열로 반환(랜더링)함
         return <TodoItem 
           key={todo.id} //고유의 키값을 보내야함
           {...todo} //투두 매개변수에 들어있는 모든 데이터가 props에 있게함

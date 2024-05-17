@@ -70,7 +70,7 @@ export const Todolist = () => {
     return (
           <TodolistContainer>
               <TodoListHeader />
-              <Editor onCreate={onCreate} /> {/* 에디터컴포넌트에 전달 */}
+              <Editor onCreate={onCreate} /> {/* 에디터컴포넌트에 전달 / onCreate-> 무언가 추가될때 */}
               <List 
                 todos={todos} 
                 onUpdate={onUpdate} 
