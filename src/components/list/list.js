@@ -23,7 +23,7 @@ export const List = ({todos, onUpdate, onDelete}) => {
   };
 
   const filteredTodos = getFilteredData();
-
+//rea
   return (
     <StyledListContainer>
       <p>To do list🌱</p>
